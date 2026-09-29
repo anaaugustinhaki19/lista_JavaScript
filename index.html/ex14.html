@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+
+    <script>
+        var m, op, res
+
+        m = parseInt(prompt("Digite o valor em metros: "))
+
+        op = parseInt(prompt("Escolha a conversão:\n1 - Converter para centímetros\n2 - Converter para milímetros\n3 - Converter para quilômetros"))
+
+        switch (op) {
+            case 1:
+                res = m * 100
+                alert(m + "m equivale a " + res + " cm")
+                break
+            case 2:
+                res = m * 1000
+                alert(m + "m equivale a " + res + " mm")
+                break
+            case 3:
+                res = m / 1000
+                alert(m + "m equivale a " + res + " km")
+                break
+            default:
+                alert("Opção inválida")
+                break
+        }
+    </script>
+</body>
+</html>

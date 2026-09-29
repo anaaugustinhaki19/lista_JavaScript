@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <h1>Mini Sistema de Compras</h1>
+
+    <script>
+        var opcaop, nomep, precouni, qtd, subtotal
+        var opPagamento, percentualdesc, valordesc, vfinal
+        var produtovalido, pagamentovalido
+
+        opcaop = parseInt(prompt("PRODUTOS: \n" + "1 - Camiseta - R$ 50,00\n" + "2 - Calça - R$ 100,00\n" +  "3 - Tênis - R$ 200,00\n\n" +
+                                "Informe o número do produto desejado:"))
+
+        produtovalido = true
+
+        switch (opcaop) {
+            case 1:
+                nomep = "Camiseta"
+                precouni = 50
+                break
+            case 2:
+                nomep = "Calça"
+                precouni = 100
+                break
+            case 3:
+                nomep = "Tênis"
+                precouni = 200
+                break
+            default:
+                produtovalido = false
+                break
+        }
+
+        if (produtovalido) {
+            qtd = parseInt(prompt("Digite a quantidade desejada:"))
+            subtotal = precouni * qtd
+
+            opPagamento = parseInt(prompt("Subtotal: R$ " + subtotal + "\n\n" + "FORMAS DE PAGAMENTO: \n" + "1 - Pix (10% de desconto)\n" +  "2 - Dinheiro (5% de desconto)\n" + "3 - Cartão (sem desconto)\n\n" +
+                                       "Informe a forma de pagamento:"))
+
+            pagamentovalido = true
+
+            switch (opPagamento) {
+                case 1:
+                    percentualdesc = 0.10
+                    break
+                case 2:
+                    percentualdesc = 0.05
+                    break
+                case 3:
+                    percentualdesc = 0.00
+                    break
+                default:
+                    pagamentovalido = false
+                    break
+            }
+
+            if (pagamentovalido) {
+                valordesc = subtotal * percentualdesc
+                vfinal = subtotal - valordesc
+
+                alert("RESUMO DA COMPRA: \n" + "a) Produto: " + nomep + "\n" + "b) Quantidade: " + qtd + "\n" + "c) Subtotal: R$ " + subtotal + "\n" + "d) Valor do desconto: R$ " + valordesc + "\n" + "e) Valor final: R$ " + vfinal)
+            } else {
+                alert("Forma de pagamento inválida!")
+            }
+
+        } else {
+            alert("Produto inválido")
+        }
+    </script>
+</body>
+</html>

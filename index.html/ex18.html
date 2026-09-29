@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 18</title>
+</head>
+<body>
+    <h1>Classificação de Filme</h1>
+
+    <script>
+        var idade, opcao
+
+        idade = parseInt(prompt("Digite a sua idade: "))
+
+        opcao = parseInt(prompt("Escolha o filme desejado:\n" + "1 - Filme Livre\n" + "2 - Filme com classificação de 12 anos\n" + "3 - Filme com classificação de 16 anos\n" +  "4 - Filme com classificação de 18 anos"))
+
+        switch (opcao) {
+            case 1:
+                alert("Você tem idade suficiente para assistir ao Filme Livre!")
+                break
+            case 2:
+                if (idade >= 12) {
+                    alert("Você tem idade suficiente para assistir ao filme.")
+                } else {
+                    alert("Você NÃO tem idade suficiente para assistir a este filme.")
+                }
+                break
+            case 3:
+                if (idade >= 16) {
+                    alert("Você tem idade suficiente para assistir ao filme.")
+                } else {
+                    alert("Você NÃO tem idade suficiente para assistir a este filme.")
+                }
+                break
+            case 4:
+                if (idade >= 18) {
+                    alert("Você tem idade suficiente para assistir ao filme.")
+                } else {
+                    alert("Você NÃO tem idade suficiente para assistir a este filme.")
+                }
+                break
+            default:
+                alert("Opção inválida")
+                break
+        }
+    </script>
+</body>
+</html>

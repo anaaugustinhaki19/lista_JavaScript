@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <script>
+        var n1, n2, op, resultado
+
+        n1 = parseInt(prompt("Informe o primeiro número: "))
+        n2 = parseInt(prompt("Informe o segundo número: "))
+
+        op = parseInt(prompt("Escolha a operação:\n1 - Somar\n2 - Subtrair\n3 - Multiplicar\n4 - Dividir"))
+
+        switch (op) {
+            case 1:
+                resultado = n1 + n2
+                alert("Resultado da Soma: " + resultado)
+                break
+            case 2:
+                resultado = n1 - n2
+                alert("Resultado da Subtração: " + resultado)
+                break
+            case 3:
+                resultado = n1 * n2
+                alert("Resultado da Multiplicação: " + resultado)
+                break
+            case 4:
+                resultado = n1 / n2
+                alert("Resultado da Divisão: " + resultado)
+                break
+            default:
+                alert("Opção inválida")
+                break
+        }
+
+    </script>
+
+</body>
+</html>

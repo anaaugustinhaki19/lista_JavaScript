@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <h1>Posto de Combustível</h1>
+
+    <script>
+        var opcao, litros, combustivel, litro, valorSemDesconto, desconto, vfinal
+
+        opcao = parseInt(prompt("Escolha o combustível:\n" + "1 - Gasolina - R$ 6,20 por litro\n" + "2 - Etanol - R$ 4,30 por litro\n" + "3 - Diesel - R$ 6,00 por litro"))
+
+        switch (opcao) {
+            case 1:
+                combustivel = "Gasolina"
+                litro = 6.20
+                break
+            case 2:
+                combustivel = "Etanol"
+                litro = 4.30
+                break
+            case 3:
+                combustivel = "Diesel"
+                litro = 6.00
+                break
+            default:
+                combustivel = ""
+                break
+        }
+
+        if (combustivel != "") {
+            litros = parseFloat(prompt("informe a quantidade de litros desejada: "))
+            valorSemDesconto = litros * litro
+
+            if (valorSemDesconto > 200) {
+                desconto = valorSemDesconto * 0.05
+            } else {
+                desconto = 0
+            }
+
+            vfinal = valorSemDesconto - desconto
+
+            alert("RESUMO DA COMPRA: \n" +
+                  "a) Combustível: " + combustivel + "\n" +
+                  "b) Litros: " + litros + "L\n" +
+                  "c) Valor antes do desconto: R$ " + valorSemDesconto + "\n" +
+                  "d) Valor do desconto: R$ " + desconto + "\n" +
+                  "e) Valor final: R$ " + vfinal)
+        } else {
+            alert("Opção inválida")
+        }
+    </script>
+</body>
+</html>

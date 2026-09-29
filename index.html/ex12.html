@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <h1>Maior entre Três Números</h1>
+
+    <script>
+        var n1, n2, n3, maior
+
+        n1 = parseInt(prompt("Informe o primeiro número: "))
+        n2 = parseInt(prompt("Informe o segundo número: "))
+        n3 = parseInt(prompt("Informe o terceiro número: "))
+
+        if (n1 >= n2 && n1 >= n3) {
+            maior = n1
+        } else if (n2 >= n1 && n2 >= n3) {
+            maior = n2
+        } else {
+            maior = n3
+        }
+
+        alert("O maior número é: " + maior)
+
+    </script>
+
+</body>
+</html>

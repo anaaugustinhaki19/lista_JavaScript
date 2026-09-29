@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 11</title>
+</head>
+<body>
+    <h1>Desconto em uma Compra</h1>
+
+    <script>
+        var compra, final, desconto
+
+        compra = parseInt(prompt("Informe o valor da compra (em R$): "))
+
+        if (compra >= 200) {
+            desconto = compra * 0.10
+            final = compra - desconto
+            alert("Você ganhou 10% de desconto!\nValor final: R$" + final)
+        } else {
+            final = compra
+            alert("Valor sem desconto.\nValor final: R$" + final )
+        }
+
+    </script>
+
+</body>
+</html>

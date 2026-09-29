@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Situação do Aluno</h1>
+
+    <script>
+        var n1, n2, media
+
+        n1 = parseInt(prompt("Informe a primeira nota: "))
+        n2 = parseInt(prompt("Digite a segunda nota: "))
+
+        media = (n1 + n2) / 2
+
+        if (media >= 7) {
+            alert("Média: " + media + "\nSituação: Aprovado!")
+        } else if (media >= 4 && media < 7) {
+            alert("Média: " + media + "\nSituação: Recuperação.")
+        } else {
+            alert("Média: " + media + "\nSituação: Reprovado.")
+        }
+
+    </script>
+    
+</body>
+</html>

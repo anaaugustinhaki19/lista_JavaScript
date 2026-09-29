@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 16</title>
+</head>
+<body>
+    <h1>Forma de Pagamento</h1>
+
+    <script>
+        var vcompra, opcao, vfinal
+
+        vcompra = parseInt(prompt("Informe o valor da compra (em R$): "))
+
+        opcao = parseInt(prompt("Escolha a forma de pagamento:\n" + "1 - Pix (10% de desconto)\n" + "2 - Dinheiro (5% de desconto)\n" + "3 - Cartão à vista (sem desconto)\n" + "4 - Cartão parcelado (10% de acréscimo)"))
+
+        switch (opcao) {
+            case 1:
+                vfinal = vcompra - (vcompra * 0.10)
+                alert("Forma de pagamento: Pix\nValor final a pagar: R$ " + vfinal)
+                break
+            case 2:
+                vfinal = vcompra - (vcompra * 0.05)
+                alert("Forma de pagamento: Dinheiro\nValor final a pagar: R$ " + vfinal)
+                break
+            case 3:
+                vfinal = vcompra
+                alert("Forma de pagamento: Cartão à vista\nValor final a pagar: R$ " + vfinal)
+                break
+            case 4:
+                vfinal = vcompra + (vcompra * 0.10)
+                alert("Forma de pagamento: Cartão parcelado\nValor final a pagar: R$ " + vfinal)
+                break
+            default:
+                alert("Forma de pagamento inválida")
+                break
+        }
+
+
+    </script>
+
+</body>
+</html>
